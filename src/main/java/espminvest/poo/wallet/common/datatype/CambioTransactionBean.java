@@ -7,8 +7,8 @@ import java.util.Date;
 public class CambioTransactionBean {
     private String id;
     private WalletBean wallet;
-    private EstimateBean estimate;
-    private Date data;
+    private int estimate;
+    private Date date;
     private Double qtd;
 
     public String getId() {
@@ -27,20 +27,20 @@ public class CambioTransactionBean {
         this.wallet = wallet;
     }
 
-    public EstimateBean getEstimate() {
+    public int getEstimate() {
         return estimate;
     }
 
-    public void setEstimate(EstimateBean estimate) {
+    public void setEstimate(int estimate) {
         this.estimate = estimate;
     }
 
-    public Date getData() {
-        return data;
+    public Date getDate() {
+        return date;
     }
 
-    public void setData(Date data) {
-        this.data = data;
+    public void setDate(Date data) {
+        this.date = date;
     }
 
     public Double getQtd() {

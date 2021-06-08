@@ -5,9 +5,40 @@ import espminvest.poo.user.common.datatype.UserBean;
 import java.util.List;
 
 public class WalletBean {
-    private String id;
-    private UserBean user_id;
+    private int id;
+    private int user;
     private Double balance;
     private List<CambioTransactionBean> cambioTransactions;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getUser() {
+        return user;
+    }
+
+    public void setUser(int user) {
+        this.user = user;
+    }
+
+    public Double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(Double balance) {
+        this.balance = balance;
+    }
+
+    public List<CambioTransactionBean> getCambioTransactions() {
+        return cambioTransactions;
+    }
+
+    public void setCambioTransactions(List<CambioTransactionBean> cambioTransactions) {
+        this.cambioTransactions = cambioTransactions;
+    }
 }
