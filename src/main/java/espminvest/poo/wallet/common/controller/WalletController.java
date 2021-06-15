@@ -6,22 +6,24 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import static espminvest.poo.wallet.common.constants.Constants.BASE_URL;
 
 @FeignClient("service.wallet")
 public interface WalletController {
 
-
     // Accepting xxx-form-urlencoded
-    @PostMapping(path = "/wallets", consumes = {MediaType.APPLICATION_FORM_URLENCODED_VALUE,
+    @PostMapping(path = BASE_URL, consumes = {MediaType.APPLICATION_FORM_URLENCODED_VALUE,
             MediaType.MULTIPART_FORM_DATA_VALUE}, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public WalletBean saveWallet(@RequestBody @ModelAttribute WalletBean wallet);
 
-    @GetMapping(path = "/wallets/{id}")
+    @GetMapping(path = BASE_URL + "/user/{id}")
     public WalletBean getWalletByUserId(@PathVariable String id);
 
-    @DeleteMapping(path = "/wallets/{id}")
+    @GetMapping(path = BASE_URL + "/{id}")
+    public WalletBean getWalletById(@PathVariable String id);
+
+    @DeleteMapping(path = BASE_URL + "/{id}")
     public void deleteWallet(@PathVariable String id);
 
 }

@@ -1,10 +1,10 @@
 package espminvest.poo.wallet.common.datatype;
 
-import espminvest.poo.cambio.common.datatype.EstimateBean;
+import espminvest.poo.stock.common.datatype.EstimateBean;
 
 import java.util.Date;
 
-public class CambioTransactionBean {
+public class StockTransactionBean {
     private int id;
     private WalletBean wallet;
     private EstimateBean estimate;
@@ -31,15 +31,15 @@ public class CambioTransactionBean {
         return estimate;
     }
 
-    public void setEstimate(EstimateBean estimate_id) {
-        this.estimate = estimate_id;
+    public void setEstimate(EstimateBean estimate) {
+        this.estimate = estimate;
     }
 
     public Date getDate() {
         return date;
     }
 
-    public void setDate(Date data) {
+    public void setDate(Date date) {
         this.date = date;
     }
 

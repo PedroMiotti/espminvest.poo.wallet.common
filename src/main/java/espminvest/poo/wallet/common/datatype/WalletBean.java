@@ -9,6 +9,7 @@ public class WalletBean {
     private int user;
     private Double balance;
     private List<CambioTransactionBean> cambioTransactions;
+    private List<StockTransactionBean> stockTransactions;
 
     public int getId() {
         return id;
@@ -36,6 +37,14 @@ public class WalletBean {
 
     public List<CambioTransactionBean> getCambioTransactions() {
         return cambioTransactions;
+    }
+
+    public List<StockTransactionBean> getStockTransactions() {
+        return stockTransactions;
+    }
+
+    public void setStockTransactions(List<StockTransactionBean> stockTransactions) {
+        this.stockTransactions = stockTransactions;
     }
 
     public void setCambioTransactions(List<CambioTransactionBean> cambioTransactions) {
